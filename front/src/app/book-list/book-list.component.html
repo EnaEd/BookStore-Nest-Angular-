@@ -1,0 +1,89 @@
+
+<div class="row p-3">
+    <div class="col-3">
+        <div class="bg-dark text-white">Filters
+        </div>
+        <ng-autocomplete [data]="books" [searchKeyword]="keyword" (selected)='selectEvent($event)' [placeHolder]="placeholder"
+            (inputChanged)='onChangeSearch($event)' (inputFocused)='onFocused($event)' [itemTemplate]="itemTemplate"
+            [notFoundTemplate]="notFoundTemplate">
+        </ng-autocomplete>
+
+        <ng-template #itemTemplate let-item>
+            <a [innerHTML]="item.title"></a>
+        </ng-template>
+
+        <ng-template #notFoundTemplate let-notFound>
+            <div [innerHTML]="notFound"></div>
+        </ng-template>
+
+
+        <ng-multiselect-dropdown class="m-1" [placeholder]="'- select category -'" [data]="categories"
+            [(ngModel)]="selectedCategories" [settings]="dropdownSettings" (onSelect)="addCategoryToFilter($event)" (onSelectAll)="addCategoryToFilter($event)"
+            (onDeSelect)="removeCategoryFromFilter($event)" (onDeSelectAll)="removeCategoryFromFilter($event)">
+        </ng-multiselect-dropdown>
+
+        <ng-multiselect-dropdown class="m-1" [placeholder]="'- select author -'" [data]="authors"
+            [(ngModel)]="selectedAuthors" [settings]="dropdownSettings" (onSelect)="addAuthorToFilter($event)" (onSelectAll)="addAuthorToFilter($event)"
+            (onDeSelect)="removeAuthorFromFilter($event)" (onDeSelectAll)="removeAuthorFromFilter($event)">
+        </ng-multiselect-dropdown>
+
+        <ng-multiselect-dropdown class="m-1" [placeholder]="'- select type -'" [data]="types"
+            [(ngModel)]="selectedTypes" [settings]="dropdownSettings" (onSelect)="addTypeToFilter($event)" (onSelectAll)="addTypeToFilter($event)"
+            (onDeSelect)="removeTypeFromFilter($event)" (onDeSelectAll)="removeTypeFromFilter($event)">
+        </ng-multiselect-dropdown>
+<div>Select price range</div>
+        <ng5-slider [(value)]="sliderValue" [(highValue)]="highSliderValue" [(options)]="optionsSliderRange">
+        </ng5-slider>
+
+    </div>
+    <div class="col-7">
+
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let book of books; index as i">
+                    <td>{{i+1}}</td>
+                    <td>{{book.title}}</td>
+                    <td>{{book.author}}</td>
+                    <td>{{book.category}}</td>
+                    <td>{{book.type}}</td>
+                    <td>{{book.price}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col-3">
+                <div class="form-inline pull-left m-r-1">
+                    <select [value]="productsPerPage" (change)="changePageSize($event.target.value)">
+                        <option value="3">3 per Page</option>
+                        <option value="4">4 per Page</option>
+                        <option value="6">6 per Page</option>
+                        <option value="8">8 per Page</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-9 ">
+                <div class=" d-flex justify-content-end">
+                    <button class="btn btn-outline-primary"
+                        [disabled]="previousPage==null||previousPage==''||pageCount==1"
+                        (click)="goToPrevious()">Previous</button>
+                    <button *counter="let page of pageCount" (click)="changePage(page)" class="btn btn-outline-primary"
+                        [class.active]="page == selectedPage">{{page}}
+                    </button>
+                    <button class="btn btn-outline-primary" (click)="goToNext()"
+                        [disabled]="nextPage==null||nextPage==''||pageCount==1">next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
