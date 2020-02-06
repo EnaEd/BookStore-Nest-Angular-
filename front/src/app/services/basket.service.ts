@@ -13,7 +13,8 @@ export class BasketService {
 
         this.itemCount = 0;
         this.basketPrice = 0;
-
+        console.log(this.lines);
+        
         this.lines.forEach(line => {
             this.itemCount += line.quantity;
             this.basketPrice += (line.quantity * line.book.price);
@@ -21,7 +22,7 @@ export class BasketService {
     }
 
     addLine(book: Book, quantity: number = 1) {
-        let line = this.lines.find(line => line.book.id == book.id);
+        let line = this.lines.find(line => line.book.title === book.title);
         if (line != undefined) {
             line.quantity += quantity;
             this.recalculate();

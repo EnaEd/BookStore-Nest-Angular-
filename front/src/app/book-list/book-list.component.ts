@@ -200,7 +200,6 @@ export class BookListComponent implements OnInit {
     if (newCategory) {
       this.selectedCategories.push(newCategory);
     }
-    console.log("in add select");
     this.changeFilter();
   }
 

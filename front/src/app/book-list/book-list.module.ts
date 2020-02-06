@@ -1,3 +1,4 @@
+import { BasketDetailComponent } from './../basket-detail/basket-detail.component';
 import { BookListComponent } from './book-list.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -14,7 +15,7 @@ import { BasketSummaryComponent } from '../basket-summary/basket-summary.compone
 
 @NgModule({
     imports:[BrowserModule,FormsModule,NgMultiSelectDropDownModule.forRoot(),Ng5SliderModule,AutocompleteLibModule],
-    declarations:[BookListComponent,CounterDirective,BasketSummaryComponent],
+    declarations:[BookListComponent,CounterDirective,BasketSummaryComponent,BasketDetailComponent],
     exports:[BookListComponent]
 })
 export class BookListModule{}

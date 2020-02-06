@@ -55,7 +55,6 @@ export class BookService {
         this.httpService.getTitles().subscribe(data => {
             this.titles = data.filter((value, index, self) => self.indexOf(value) === index).sort();
         })
-
     }
 
     changeSubscriber(url: string, params: HttpParams = null) {

@@ -11,18 +11,16 @@ import 'hammerjs';
 import { BasketService } from './services/basket.service';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
-
 @NgModule({
   declarations: [
     AppComponent,
-    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BookListModule,
     HttpClientModule,
-    AngularFontAwesomeModule
+    AngularFontAwesomeModule,
   ],
   providers: [BookService, HttpService, BasketService],
   bootstrap: [AppComponent]
