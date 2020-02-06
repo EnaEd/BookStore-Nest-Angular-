@@ -11,14 +11,17 @@ export class BookListFirstGuard {
     }
 
     canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+
         if (!this.firstNavigation) {
             return true;
         }
-            this.firstNavigation = false;
-            if (route.component != BookListComponent) {
-                this.router.navigateByUrl("/");
-                return false;
-            }
-
+        this.firstNavigation = false;
+        console.log(route.component);
+        console.log(state.url);
+        if (route.component != BookListComponent) {
+            this.router.navigateByUrl("/");
+            return false;
+        }
+        return true;
     }
 }

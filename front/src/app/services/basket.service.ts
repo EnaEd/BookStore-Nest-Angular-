@@ -13,7 +13,6 @@ export class BasketService {
 
         this.itemCount = 0;
         this.basketPrice = 0;
-        console.log(this.lines);
         
         this.lines.forEach(line => {
             this.itemCount += line.quantity;

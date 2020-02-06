@@ -7,7 +7,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: "basketdetail", component: BasketDetailComponent, canActivate: [BookListFirstGuard] },
-  { path: "booklist", component: BookListComponent},
+  { path: "booklist", component: BookListComponent, canActivate: [BookListFirstGuard]},
   { path: "**", redirectTo: "/booklist" }
 ];
 

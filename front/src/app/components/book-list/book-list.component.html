@@ -68,7 +68,8 @@
         <div class="row">
             <div class="col-3">
                 <div class="form-inline pull-left m-r-1">
-                    <select [value]="productsPerPage" (change)="changePageSize($event.target.value)">
+                    
+                    <select class="custom-select" [value]="productsPerPage" (change)="changePageSize($event.target.value)">
                         <option value="3">3 per Page</option>
                         <option value="4">4 per Page</option>
                         <option value="6">6 per Page</option>

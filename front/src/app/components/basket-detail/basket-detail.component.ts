@@ -8,15 +8,11 @@ import { PlatformLocation } from '@angular/common';
 })
 export class BasketDetailComponent implements OnInit {
 
-  constructor(private readonly location: PlatformLocation) { }
+  constructor() { }
 
   ngOnInit() {
 
-    this.location.onPopState(() => {
-
-      console.log('pressed back!');
-
-    });
+   
   }
 
 
