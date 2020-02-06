@@ -34,7 +34,7 @@ export class BasketService {
     }
 
     updateQuantity(book: Book, quantity: number) {
-        let line = this.lines.find(line => line.book.id == book.id);
+        let line = this.lines.find(line => line.book.title == book.title);
         if (line != undefined) {
             line.quantity = Number(quantity);
         }

@@ -1,1 +1,43 @@
-<p>basket-detail works!</p>
+<div class="m-1">
+    <h2 class="text-xs-center">Your Basket</h2>
+
+    <table class="table table-bordered table-striped p-1">
+        <thead>
+            <tr>
+                <th>Quantity</th>
+                <th>Book</th>
+                <th class="text-xs-right">Price</th>
+                <th class="text-xs-right">Subtotal</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngIf="basketService.lines.length==0">
+                <td colspan="4" class="text-xs-center">
+                    Your basket is empty
+                </td>
+            </tr>
+            <tr *ngFor="let item of basketService.lines">
+                <td>
+                    <input type="number" class="form-control-sm" style="width: 5em;" [value]="item.quantity"
+                        (change)="basketService.updateQuantity(item.book,$event.target.value)" />
+                </td>
+                <td>{{item.book.title}}</td>
+                <td class="text-xs-right">{{item.book.price | currency:'USD':"symbol-narrow":"2.2-2"}}</td>
+                <td class="text-xs-right">{{item.lineTotal | currency:'USD':"symbol-narrow":"2.2-2"}}</td>
+                <td class="text-xs-center">
+                    <button class="btn btn-sm btn-danger"
+                        (click)="basketService.removeLine(item.book.title)">Remove</button>
+                </td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-xs-right">Total:</td>
+                <td class="text-xs-right"> {{basketService.basketPrice | currency:'USD':"symbol-narrow":"2.2-2"}}</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<div class="text-xs-center">
+    <button class="btn btn-primary" routerlink="/" [disabled]="basketService.lines.length==0">Back</button>
+</div>

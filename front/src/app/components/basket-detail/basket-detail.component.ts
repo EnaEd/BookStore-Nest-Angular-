@@ -1,3 +1,4 @@
+import { BasketService } from './../../services/basket.service';
 import { Component, OnInit } from '@angular/core';
 import { PlatformLocation } from '@angular/common';
 
@@ -8,10 +9,10 @@ import { PlatformLocation } from '@angular/common';
 })
 export class BasketDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(public basketService:BasketService) { }
 
   ngOnInit() {
-
+console.log(this.basketService.lines);
    
   }
 
