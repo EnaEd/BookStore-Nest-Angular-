@@ -8,19 +8,23 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpService } from './services/http.service';
 import 'hammerjs';
+import { BasketService } from './services/basket.service';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BookListModule,
     HttpClientModule,
+    AngularFontAwesomeModule
   ],
-  providers: [BookService,HttpService],
+  providers: [BookService, HttpService, BasketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

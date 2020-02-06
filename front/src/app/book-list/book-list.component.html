@@ -36,8 +36,11 @@
         </ng5-slider>
 
     </div>
+    
     <div class="col-7">
-
+        <div class="d-flex justify-content-end">
+            <basketSummary></basketSummary> 
+        </div>
         <table class="table table-hover">
             <thead>
                 <tr>
@@ -47,16 +50,18 @@
                     <th scope="col">Category</th>
                     <th scope="col">Type</th>
                     <th scope="col">Price</th>
+                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr *ngFor="let book of books; index as i">
-                    <td>{{i+1}}</td>
+                    <td class="d-flex justify-content-center">{{i+1}}</td>
                     <td>{{book.title}}</td>
                     <td>{{book.author}}</td>
                     <td>{{book.category}}</td>
                     <td>{{book.type}}</td>
                     <td>{{book.price}}</td>
+                    <td><button class="btn btn-success btn-sm pull-xs-right" (click)="addBookToBasket(book)"> add to cart </button></td>
                 </tr>
             </tbody>
         </table>

@@ -6,6 +6,7 @@ import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown';
 import { Ng5SliderModule } from 'ng5-slider';
 import { CounterDirective } from '../directives/counter.directive';
 import {AutocompleteLibModule} from 'angular-ng-autocomplete';
+import { BasketSummaryComponent } from '../basket-summary/basket-summary.component';
   
   
 
@@ -13,7 +14,7 @@ import {AutocompleteLibModule} from 'angular-ng-autocomplete';
 
 @NgModule({
     imports:[BrowserModule,FormsModule,NgMultiSelectDropDownModule.forRoot(),Ng5SliderModule,AutocompleteLibModule],
-    declarations:[BookListComponent,CounterDirective],
+    declarations:[BookListComponent,CounterDirective,BasketSummaryComponent],
     exports:[BookListComponent]
 })
 export class BookListModule{}

@@ -34,7 +34,9 @@ export class BookService {
         })
 
         this.httpService.getPrices().subscribe(data => {
-            this.prices = data.filter((value, index, self) => self.indexOf(value) === index).sort();
+            console.log(data);
+            this.prices = data.filter((value, index, self) => self.indexOf(value) === index).sort((a, b) => (+a) - (+b));
+            console.log(this.prices);
         })
 
         this.subscription = this.httpService.getBooks().subscribe(data => {

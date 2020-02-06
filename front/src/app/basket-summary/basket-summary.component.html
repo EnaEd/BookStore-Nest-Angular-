@@ -1,0 +1,12 @@
+<div class="pull-xs-right">
+
+    <button class="btn btn-sm bg-inverse" [disabled]="basket.itemCount==0">
+        <i class="fa fa-shopping-cart"> : </i>
+        <span *ngIf="basket.itemCount>0">
+            {{basket.itemCount}} item(s)
+            {{ basket.basketPrice | currency:'USD':true:"2.2-2" }}
+        </span>
+        <span *ngIf="basket.itemCount==0">
+            (empty)</span>
+    </button>
+</div>

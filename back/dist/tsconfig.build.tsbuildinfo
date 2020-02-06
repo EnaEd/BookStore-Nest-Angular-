@@ -2154,7 +2154,7 @@
         "signature": "50e754966781e43f8bbd74da18a6d660b644751e19a002ae43d6dd4df852284c"
       },
       "../src/controllers/book/book.service.ts": {
-        "version": "7e91c62ada2a10440d1e017354b506ded1a13345e1fe2edfd1c9a7c234031a7f",
+        "version": "b1c031b68f995beddb20cd42b321cf5b3df6350ba7d413074954c119dae95926",
         "signature": "e1d0a4d3d4cb57d4ad95bc703508c9255d815366af2e1c017b2149a19fc810f3"
       },
       "../src/controllers/book/book.controller.ts": {

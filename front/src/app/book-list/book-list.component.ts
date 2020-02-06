@@ -5,6 +5,7 @@ import { Book } from '../models/book.model';
 import { Options } from 'ng5-slider';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
 import { AppSettings } from '../app.settings';
+import { BasketService } from '../services/basket.service';
 
 
 @Component({
@@ -36,7 +37,7 @@ export class BookListComponent implements OnInit {
 
   //#endregion variables
 
-  constructor(private readonly bookService: BookService) { }
+  constructor(private readonly bookService: BookService, private readonly basket: BasketService) { }
 
   ngOnInit() {
     this.dropdownSettings = {
@@ -102,8 +103,10 @@ export class BookListComponent implements OnInit {
   }
 
   set sliderValue(number: number) {
-    this.selectedPriceRange[0] = this.sliderLowValue = number;
-    if (this.sliderLowValue) {
+    this.sliderLowValue = number;
+
+    if (this.selectedPriceRange) {
+      this.selectedPriceRange[0] = this.sliderLowValue;
       this.changeFilter();
     }
   }
@@ -113,8 +116,9 @@ export class BookListComponent implements OnInit {
     return this.sliderHighValue;
   }
   set highSliderValue(number: number) {
-    this.selectedPriceRange[1] = this.sliderHighValue = number;
-    if (this.sliderHighValue) {
+    this.sliderHighValue = number;
+    if (this.selectedPriceRange) {
+      this.selectedPriceRange[this.selectedPriceRange.length - 1] = this.sliderHighValue;
       this.changeFilter();
     }
   }
@@ -245,5 +249,8 @@ export class BookListComponent implements OnInit {
     this.changeFilter();
   }
 
+  addBookToBasket(book: Book) {
+    this.basket.addLine(book);
+  }
   //#endregion methods
 }

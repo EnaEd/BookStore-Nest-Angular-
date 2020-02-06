@@ -39,8 +39,8 @@ let BookService = class BookService {
                     $options: "i"
                 } : { $ne: null },
                 price: byPrice ? {
-                    $gte: byPrice[0].toFixed(2),
-                    $lte: byPrice[1].toFixed(2)
+                    $gte: byPrice[0],
+                    $lte: byPrice[1]
                 } : { $ne: null }
             }
         });
