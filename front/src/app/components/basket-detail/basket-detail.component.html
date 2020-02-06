@@ -37,7 +37,8 @@
             </tr>
         </tfoot>
     </table>
-</div>
-<div class="text-xs-center">
-    <button class="btn btn-primary" routerlink="/" [disabled]="basketService.lines.length==0">Back</button>
+    <div class="text-xs-center d-flex justify-content-center">
+        <button class="btn btn-outline-primary" routerlink="/" >Back</button>
+        <button class="btn btn-primary" routerlink="/" [disabled]="basketService.lines.length==0">Continue shop</button>
+    </div>
 </div>
