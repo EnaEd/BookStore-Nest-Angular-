@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlatformLocation } from '@angular/common';
 
 @Component({
   selector: 'app-basket-detail',
@@ -7,9 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasketDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private readonly location: PlatformLocation) { }
 
   ngOnInit() {
+
+    this.location.onPopState(() => {
+
+      console.log('pressed back!');
+
+    });
   }
+
 
 }

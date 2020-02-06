@@ -85,7 +85,7 @@
                         [class.active]="page == selectedPage">{{page}}
                     </button>
                     <button class="btn btn-outline-primary" (click)="goToNext()"
-                        [disabled]="nextPage==null||nextPage==''||pageCount==1">next</button>
+                        [disabled]="nextPage==null||nextPage==''||pageCount==selectedPage">next</button>
                 </div>
             </div>
         </div>
