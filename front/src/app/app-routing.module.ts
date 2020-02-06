@@ -1,6 +1,6 @@
 import { BookListFirstGuard } from './guards/book-list-first.guard';
-import { BasketDetailComponent } from './basket-detail/basket-detail.component';
-import { BookListComponent } from './book-list/book-list.component';
+import { BasketDetailComponent } from './components/basket-detail/basket-detail.component';
+import { BookListComponent } from './components/book-list/book-list.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 

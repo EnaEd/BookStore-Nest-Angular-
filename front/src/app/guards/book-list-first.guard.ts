@@ -1,6 +1,6 @@
 import { Injectable } from "@angular/core";
 import { Router, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { BookListComponent } from '../book-list/book-list.component';
+import { BookListComponent } from '../components/book-list/book-list.component';
 
 @Injectable()
 export class BookListFirstGuard {

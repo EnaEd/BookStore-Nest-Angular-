@@ -1,11 +1,11 @@
 import { Observable } from 'rxjs';
-import { BookService } from './../services/book.service';
+import { BookService } from '../../services/book.service';
 import { Component, OnInit } from '@angular/core';
-import { Book } from '../models/book.model';
+import { Book } from '../../models/book.model';
 import { Options } from 'ng5-slider';
 import { IDropdownSettings } from 'ng-multiselect-dropdown';
-import { AppSettings } from '../app.settings';
-import { BasketService } from '../services/basket.service';
+import { AppSettings } from '../../app.settings';
+import { BasketService } from '../../services/basket.service';
 
 
 @Component({
