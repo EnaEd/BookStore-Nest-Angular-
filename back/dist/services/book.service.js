@@ -15,7 +15,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const typeorm_1 = require("@nestjs/typeorm");
 const typeorm_2 = require("typeorm");
-const book_entity_1 = require("../../entities/book.entity");
+const book_entity_1 = require("../entities/book.entity");
 const nestjs_typeorm_paginate_1 = require("nestjs-typeorm-paginate");
 let BookService = class BookService {
     constructor(bookRepository) {

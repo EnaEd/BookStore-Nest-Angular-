@@ -6,12 +6,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-const book_entity_1 = require("./controllers/book/book.entity");
+const book_entity_1 = require("./entities/book.entity");
 const common_1 = require("@nestjs/common");
 const app_controller_1 = require("./app.controller");
 const app_service_1 = require("./app.service");
 const typeorm_1 = require("@nestjs/typeorm");
-const book_module_1 = require("./controllers/book/book.module");
+const book_module_1 = require("./modules/book.module");
 let AppModule = class AppModule {
 };
 AppModule = __decorate([

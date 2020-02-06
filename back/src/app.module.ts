@@ -1,9 +1,9 @@
-import { Book } from './controllers/book/book.entity';
+import { Book } from './entities/book.entity';
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { BookModule } from './controllers/book/book.module';
+import { BookModule } from './modules/book.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({

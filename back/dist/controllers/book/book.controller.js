@@ -13,7 +13,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
-const book_service_1 = require("./book.service");
+const book_service_1 = require("../../services/book.service");
 let BookController = class BookController {
     constructor(service) {
         this.service = service;

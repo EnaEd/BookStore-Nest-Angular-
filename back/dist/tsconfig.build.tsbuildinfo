@@ -2101,7 +2101,7 @@
         "version": "c22b4c00503c6c77dbad4efeb054b7d2a606c8e30b22377a701cf4045a522c5c",
         "signature": "c22b4c00503c6c77dbad4efeb054b7d2a606c8e30b22377a701cf4045a522c5c"
       },
-      "../src/controllers/book/book.entity.ts": {
+      "../src/entities/book.entity.ts": {
         "version": "d35bb1a7d7d0f325238e0456b7469753a8cae1b2cf0062a59da1b195985c3003",
         "signature": "d5b0f885b48987c802ccca9f6f6822d761bba2a00487bc7687650ee8f26c9f2b"
       },
@@ -2153,20 +2153,20 @@
         "version": "50e754966781e43f8bbd74da18a6d660b644751e19a002ae43d6dd4df852284c",
         "signature": "50e754966781e43f8bbd74da18a6d660b644751e19a002ae43d6dd4df852284c"
       },
-      "../src/controllers/book/book.service.ts": {
-        "version": "b1c031b68f995beddb20cd42b321cf5b3df6350ba7d413074954c119dae95926",
-        "signature": "e1d0a4d3d4cb57d4ad95bc703508c9255d815366af2e1c017b2149a19fc810f3"
+      "../src/services/book.service.ts": {
+        "version": "fe0149ccb111d27b55b855a7e1e307577dd3f83d4694bc406da0052b1a924f58",
+        "signature": "51133c51dbff8aea887f78a683de0d3768f3aa15e8f1fa805d9063fb08562715"
       },
       "../src/controllers/book/book.controller.ts": {
-        "version": "479e54938823ba711282cb6cf440298c02dc747eecd555ebb230db33c89497e5",
-        "signature": "c9a9fbad019fe6a03090e8cbf4081b6833c2e85d0e03a95a243ac4ada8d490e7"
+        "version": "15f06b7b1555ea2d1b6321d9c030b712f76aca85fe904f09b09b7db3e6c914d1",
+        "signature": "acb9f848c7e2a9972aea88df037006a5d6cfeb1d5db27c3611ef5320b59d2cbb"
       },
-      "../src/controllers/book/book.module.ts": {
-        "version": "a7beb3d65273c046b98ba182b1339bfab2f07ae7a5585640443e6f9ef5b11217",
+      "../src/modules/book.module.ts": {
+        "version": "60b435aafaa4a48ca46e0ffa567f69b2e20d7a16086e7f02049b9cf75a03dc4f",
         "signature": "ec64515c0e77032c4de8c212278d9cee8344150c6b83a64e38eaa89ea2959312"
       },
       "../src/app.module.ts": {
-        "version": "d79c62714a00f45727ca1d08cd74553af0aa00257715da7d3cfd3ec128e71f3a",
+        "version": "bdd383ec62760f59857d0ed52de817acd99c25aecbe7574c751fde1b66528de0",
         "signature": "9fc7f7b6ad854404973b8cba8e6d883f758237991968e9a3965d716d46f1da88"
       },
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": {
@@ -6867,7 +6867,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/controllers/book/book.entity.ts": [
+      "../src/entities/book.entity.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -6969,11 +6969,11 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/controllers/book/book.service.ts": [
+      "../src/services/book.service.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
-        "../src/controllers/book/book.entity.ts",
+        "../src/entities/book.entity.ts",
         "../node_modules/nestjs-typeorm-paginate/dist/index.d.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -6982,30 +6982,30 @@
       ],
       "../src/controllers/book/book.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/controllers/book/book.service.ts",
+        "../src/services/book.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/controllers/book/book.module.ts": [
+      "../src/modules/book.module.ts": [
         "../src/controllers/book/book.controller.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
         "../node_modules/@nestjs/common/index.d.ts",
-        "../src/controllers/book/book.entity.ts",
-        "../src/controllers/book/book.service.ts",
+        "../src/entities/book.entity.ts",
+        "../src/services/book.service.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../src/app.module.ts": [
-        "../src/controllers/book/book.entity.ts",
+        "../src/entities/book.entity.ts",
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/app.controller.ts",
         "../src/app.service.ts",
         "../node_modules/@nestjs/typeorm/index.d.ts",
-        "../src/controllers/book/book.module.ts",
+        "../src/modules/book.module.ts",
         "../node_modules/@types/node/fs.d.ts",
         "../node_modules/@types/node/ts3.2/fs.d.ts",
         "../node_modules/@types/node/util.d.ts",
@@ -11982,7 +11982,7 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/controllers/book/book.entity.ts": [
+      "../src/entities/book.entity.ts": [
         "../node_modules/typeorm/index.d.ts"
       ],
       "../node_modules/@nestjs/typeorm/dist/common/typeorm.decorators.d.ts": [
@@ -12080,15 +12080,15 @@
         "../node_modules/@types/node/util.d.ts",
         "../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../src/controllers/book/book.service.ts": [
+      "../src/services/book.service.ts": [
         "../node_modules/typeorm/index.d.ts",
-        "../src/controllers/book/book.entity.ts",
+        "../src/entities/book.entity.ts",
         "../node_modules/nestjs-typeorm-paginate/dist/index.d.ts"
       ],
       "../src/controllers/book/book.controller.ts": [
-        "../src/controllers/book/book.entity.ts",
+        "../src/entities/book.entity.ts",
         "../node_modules/nestjs-typeorm-paginate/dist/index.d.ts",
-        "../src/controllers/book/book.service.ts"
+        "../src/services/book.service.ts"
       ],
       "../node_modules/@nestjs/core/adapters/http-adapter.d.ts": [
         "../node_modules/@nestjs/common/index.d.ts",

@@ -1,5 +1,5 @@
 import { Controller, Get, Query, Post } from '@nestjs/common';
-import { BookService } from './book.service';
+import { BookService } from '../services/book.service';
 
 
 @Controller('book')

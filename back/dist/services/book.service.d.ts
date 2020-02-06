@@ -1,5 +1,5 @@
 import { Repository } from "typeorm";
-import { Book } from "../../entities/book.entity";
+import { Book } from "../entities/book.entity";
 import { Pagination, IPaginationOptions } from 'nestjs-typeorm-paginate';
 export declare class BookService {
     private readonly bookRepository;
